@@ -1,7 +1,25 @@
 .App {
+  padding-top: 70px;
+}
+.header .container {
+  justify-content: center;
+}
+.input-group-text {
+  background-color: #212529;
+  color: #fff;
+  font-weight: bold;
+}
+.edit,
+.delete {
+  padding: 0px 6px;
+  border-radius: 2px;
+}
+.edit {
+  margin-right: 10px;
+}
+table {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -23,7 +41,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +52,367 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* navbar */
+
+.navigation {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 0rem;
+  background-color: rgba(200, 237, 197, .5);
+  color: black;
+  box-shadow: 0 2px 2px 2px rgba(34, 97, 28, 0.6);
+}
+.d-f {
+  display: flex;
+}
+.brand-name {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 1rem;
+  margin-top: 10px;
+}
+.brand-name:hover,
+.brand-name:active {
+  color: black;
+}
+.navigation-menu {
+  margin-left: auto;
+}
+.navigation-menu ul {
+  display: flex;
+  padding: 0;
+}
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+.navigation-menu li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  color: black;
+}
+.navbar-input {
+  height: 40px;
+  width: 400px;
+  border: 1px solid rgb(74, 97, 199);
+  margin-left: 100px;
+  margin-top: 15px;
+  border-radius: 20px;
+  padding-left: 20px;
+}
+.hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+  display: none;
+}
+.hamburger svg {
+  height: 30px;
+  width: 30px;
+}
+.number1 {
+  position: relative;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: white;
+  color: black;
+  display: flex;
+  width: 50px;
+  height: 40px; 
+  margin-left: 25px;
+  margin-top: 5px;
+  text-decoration: none;
+  border: none;
+  padding: 0 0 15px 5px;
+  border-radius: 20px;
+}
+.dnone {
+  text-decoration: none;
+  border: none;
+}
+.number1 svg {
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+  color: black;
+}
+.number1 p {
+  margin-left: 5px;
+  margin-bottom: 20px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .navigation-menu ul {
+    display: none;
+  }
+  .navigation-menu ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
+  }
+  .navigation-menu li {
+    text-align: center;
+    margin: 0;
+  }
+  .navigation-menu li a {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .navigation-menu li:hover {
+    background-color: #eee;
+  }
+  .navigation-menu.expanded ul {
+    display: block;
+  }
+}
+.corusel-img {
+  width: 100% !important;
+  height: 85vh;
+}
+.corusel-img img {
+  width: 30%;
+  height: 400px;
+  margin-top: 90px;
+  margin-right: auto;
+  z-index: 100000;
+}
+.corusel-info {
+  margin-left: auto !important;
+  /* width: 500px; */
+  margin-bottom: 200px;
+}
+.corusel-info h5 {
+  color: white;
+  font-size: 30px;
+}
+.products {
+  text-align: center;
+  margin-top: 50px;
+  padding-left: 50px;
+  background-color: rgba(200, 237, 197, .5);
+}
+.product-card {
+  border-radius: 20px;
+}
+.shopping-card {
+  background-color: rgba(200, 237, 197, .5);
+}
+.card-img {
+  padding: 10px 0;
+}
+.card-img img {
+  width: 150px;
+  height: 200px;
+}
+.card-name {
+  height: 80px;
+  margin: 20px 0 0 20px;
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.card-narxi {
+  margin: 0 0 20px 20px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 300;
+}
+.card-btn {
+  margin: 10px 20px;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: rgb(16, 231, 27);
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+.shop-card {
+  display: flex;
+  width: 100%;
+  height: 120px;
+  margin: 15px 0;
+}
+.shop-img {
+  width: 120px;
+  height: 120px;
+}
+.shop-img img {
+  width: 70px;
+  height: 100px;
+}
+.shop-infos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.shop-nomi {
+  width: 200px;
+}
+.shop-narxi {
+  margin: 0 20px;
+  width: 150px;
+}
+.shop-btn button {
+  border: none;
+  padding: 5px 10px;
+}
+.quantity-btn {
+  height: 30px;
+  width: 40px;
+  margin: 0 15px;
+  padding-bottom: 30px !important;
+  background-color: rgb(16, 231, 27);
+  color: white;
+  border-radius: 45%;
+}
+.delete-btn {
+  background-color: rgba(200, 237, 197, .5);
+}
+.buy-btn {
+  background-color: rgb(16, 231, 27) !important;
+  color: white !important;
+}
+.shop-items {
+  height: 80vh;
+  overflow: auto;
+}
+.home-card {
+  text-align: center;
+}
+.home-card h1 {
+  margin: 40px 0;
+}
+.home-card-item {
+  position: relative;
+  width: 280px;
+  height: 230px;
+}
+.home-card-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: rgba(45, 43, 46, .6);
+}
+.home-card-item h3 {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  color: white;
+  background-color: rgba(45, 43, 46, .6);
+  padding: 15px 20px;
+}
+.products-menu {
+  position: fixed;
+  top: 70px;
+}
+.products-menu svg {
+  width: 30px;
+  height: 30px;
+}
+.active {
+  color: rgb(16, 231, 27);
+}
+#contacts {
+  padding: 50px 150px !important;
+  background-color: rgba(200, 237, 197, .5);
+}
+#contacts h1 {
+  text-align: center;
+}
+.contactInput {
+  display: block;
+  width: 400px;
+  padding: 5px;
+  margin:20px 0;
+}
+.contactmessage {
+  width: 400px;
+  min-height: 200px;
+}
+.sendBtn {
+  display: block !important;
+  margin: 15px 0;
+
+}
+.social {
+  margin-top: 40px;
+}
+.social .icon {
+  display: block;
+  margin-top: 30px;
+  width: 25px;
+  height: 25px;
+  color: black;
+}
+.contact {
+  display: flex;
+  padding-left: 60px !important;
+}
+.contactInfo {
+  margin: 100px 0 0 50px;
+}
+.product-link {
+  display: black;
+  text-decoration: none;
+  color: black;
+}
+.product-link:hover {
+  color: black;
+}
+.product-card {
+  padding-top: 20px;
+}
+.product-card-img {
+  height: 500px;
+  width: 300px;
+}
+.product-card-img img {
+  height: 400px;
+  width: 250px;
+}
+.payment-img {
+  width: 80px;
+  height: 80px;
+}
+.payment-img img {
+  width: 40px;
+  height: 60px;
+}
+.payment-infos {
+  margin-bottom: 30px;
+}
+.d-n {
+  display: none;
+}
+.done {
+  opacity: 0.5;
 }
